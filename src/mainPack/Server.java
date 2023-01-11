@@ -1,4 +1,12 @@
+/*
+Author: Filip Hellgren
+
+The runnable Server class responsible for initializing a ServerSocket on a port and listen to requests and handle Client connections.
+ */
+
 package mainPack;
+
+import messages.Message;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -6,7 +14,6 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
 public class Server implements Runnable {
     private final ArrayList<ConnectionHandler> connections;
     private ServerSocket server;
@@ -16,7 +23,6 @@ public class Server implements Runnable {
     public Server() {
         connections = new ArrayList<>();
         isClosed = false;
-
         log("The server has started.");
     }
 
@@ -37,11 +43,11 @@ public class Server implements Runnable {
             shutdownServer();
         }
     }
-    public void broadcast(String message) {
+    public void broadcast(Message message) {
         //Broadcasts a message to be displayed for all clients.
-
         for (ConnectionHandler connection : connections) {
             if (connection == null) { continue; }
+            if (connection.getScreenName() == null) { continue; }
 
             connection.sendMessage(message);
         }

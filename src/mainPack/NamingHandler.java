@@ -1,5 +1,7 @@
 package mainPack;
 
+import messages.ServerMessage;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 
@@ -22,9 +24,6 @@ public class NamingHandler {
             if (screenName == null) { continue; }
 
             String otherName = simplifyName(screenName);
-            System.out.println(otherName);
-            System.out.println(simplifiedName);
-            System.out.println(otherName.equals(simplifiedName));
             if (simplifiedName.equals(otherName)) {
                 return true;
             }
@@ -37,19 +36,19 @@ public class NamingHandler {
     public boolean isNameValid(String name) {
         if (name == null) { return false; }
         if (name.trim().isEmpty()) {
-            client.sendMessage("Your name must not be empty!");
+            client.sendMessage(new ServerMessage("Your name must not be empty!"));
             return false;
         }
         if (isNameInUse(name)) {
-            client.sendMessage("This name is already in use!");
+            client.sendMessage(new ServerMessage("This name is already in use!"));
             return false;
         }
         return true;
     }
     public String getValidName() {
-        String name = "";
+        String name;
         while (true) {
-            client.sendMessage("Please input a screen name: ");
+            client.sendMessage(new ServerMessage("Please input a screen name: "));
             try {
                 String input = in.readLine();
                 if (isNameValid(input)) {
@@ -57,7 +56,7 @@ public class NamingHandler {
                     break;
                 }
             } catch (IOException e) {
-                client.sendMessage("Your name was not changed, please try again.");
+                client.sendMessage(new ServerMessage("Your name was not changed, please try again."));
             }
         }
 

@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff0dbcc4-4db5-43ba-bcea-68dd8288bfac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Java Chat Program.iml" afterDir="false" />
+    <list default="true" id="ff0dbcc4-4db5-43ba-bcea-68dd8288bfac" name="Changes" comment="Main UI with messaging functionality">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/messages/ClientMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/messages/DeserializedMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/messages/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/messages/MessageDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/messages/ServerMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/userinterface/Gui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/userinterface/UiInputArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/userinterface/UiMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/userinterface/UiMessageList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java Chat Program.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java Chat Program.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/NicknameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/NicknameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/QuitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/QuitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPack/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPack/ConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/ConnectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPack/NamingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/NamingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainPack/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/commands/Command.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/commands/CommandHandler.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/commands/HelpCommand.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainPack/Client.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/mainPack/Server.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/userInterface/Gui.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -26,13 +60,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hellgren.filip/IdeaProjects/Java Chat Program/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Compound.ServerAndClients">
+    <configuration name="1Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="mainPack.Server" />
+      <module name="Java Chat Program" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="2Client" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="mainPack.Client" />
+      <module name="Java Chat Program" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="messages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="3Client" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="mainPack.Client" />
+      <module name="Java Chat Program" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerAndClients" type="CompoundRunConfigurationType">
+      <toRun name="1Server" type="Application" />
+      <toRun name="2Client" type="Application" />
+      <toRun name="3Client" type="Application" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.3Client" />
+      <item itemvalue="Application.1Server" />
+      <item itemvalue="Application.2Client" />
+      <item itemvalue="Compound.ServerAndClients" />
+    </list>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,8 +127,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1669750879227</updated>
-      <workItem from="1669750880825" duration="227000" />
+      <workItem from="1669750880825" duration="635000" />
+      <workItem from="1669751592256" duration="106000" />
+      <workItem from="1669798545056" duration="2551000" />
+      <workItem from="1669801776877" duration="1269000" />
+      <workItem from="1669803186111" duration="1807000" />
+      <workItem from="1669805854768" duration="553000" />
+      <workItem from="1669835733429" duration="468000" />
+      <workItem from="1669836225035" duration="422000" />
+      <workItem from="1669836671770" duration="3826000" />
+      <workItem from="1670086623992" duration="12060000" />
+      <workItem from="1670403582196" duration="4665000" />
+      <workItem from="1670835111597" duration="4462000" />
+      <workItem from="1670935626426" duration="7089000" />
+      <workItem from="1671009134380" duration="6686000" />
+      <workItem from="1671049801841" duration="11212000" />
+      <workItem from="1673281102550" duration="7187000" />
+      <workItem from="1673354199027" duration="8146000" />
+      <workItem from="1673438383583" duration="70000" />
     </task>
+    <task id="LOCAL-00001" summary="Main Server And Client Functionality, commands">
+      <created>1669751228999</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1669751228999</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -58,5 +169,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Main Server And Client Functionality, commands" />
+    <MESSAGE value="Main UI with messaging functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main UI with messaging functionality" />
   </component>
 </project>

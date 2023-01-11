@@ -1,6 +1,9 @@
 package mainPack;
 
-import Commands.CommandHandler;
+import commands.CommandHandler;
+import messages.ClientMessage;
+import messages.Message;
+import messages.ServerMessage;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,8 +23,9 @@ public class ConnectionHandler implements Runnable {
         this.client = client;
     }
 
-    public void sendMessage(String message) {
-        out.println(message);
+    public void sendMessage(Message message) {
+        String formattedMessage = message.formatMessage();
+        out.println(formattedMessage);
     }
 
     @Override
@@ -33,10 +37,11 @@ public class ConnectionHandler implements Runnable {
             NamingHandler namingHandler = new NamingHandler(server, this);
             CommandHandler commandHandler = new CommandHandler(server, this);
 
-            out.println("Successfully connected to the server.");
+            Message connectionStatusInfo = new ServerMessage("Successfully connected to the server.");
+            sendMessage(connectionStatusInfo);
 
             screenName = namingHandler.getValidName();
-            server.broadcast(screenName + " connected!");
+            server.broadcast(new ServerMessage(screenName + " connected!"));
             server.log(screenName + " connected!");
 
             String message;
@@ -47,7 +52,9 @@ public class ConnectionHandler implements Runnable {
 
                 boolean isCommandProcessed = commandHandler.ProcessCommands(message);
                 if (!isCommandProcessed) {
-                    server.broadcast(screenName + ": " + message);
+                    Message newMessage = new ClientMessage(this, message);
+                    server.broadcast(newMessage);
+                   // server.broadcast(screenName + ": " + message);
                 }
             }
         } catch (IOException e) {
@@ -59,7 +66,7 @@ public class ConnectionHandler implements Runnable {
         if (!client.isClosed()) {
             String disconnectInfo = screenName + " disconnected!";
             System.out.println(disconnectInfo);
-            server.broadcast(disconnectInfo);
+            server.broadcast(new ServerMessage(disconnectInfo));
             server.removeClient(this);
         }
 

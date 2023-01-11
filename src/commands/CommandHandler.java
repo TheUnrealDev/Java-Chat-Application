@@ -1,13 +1,14 @@
-package Commands;
+package commands;
 
 import mainPack.NamingHandler;
 import mainPack.Server;
 import mainPack.ConnectionHandler;
+import messages.ServerMessage;
 
 import java.util.ArrayList;
 
 public class CommandHandler {
-    private final ArrayList<Command> commands;
+    protected final ArrayList<Command> commands;
     private final Server server;
     private final ConnectionHandler client;
     private final NamingHandler namingHandler;
@@ -29,10 +30,10 @@ public class CommandHandler {
     }
 
     public boolean ProcessCommands(String message) {
-        /**
-         * Checks for commands in the text written by the client and processes the commands.
-         * Returns boolean "isCommandProcessed" which is set to false only if no command is recognized.
-         **/
+        /*
+          Checks for commands in the text written by the client and processes the commands.
+          Returns boolean "isCommandProcessed" which is set to false only if no command is recognized.
+         */
         boolean isCommandProcessed = false;
         try {
             String lowerCaseMessage = message.toLowerCase();
@@ -42,9 +43,10 @@ public class CommandHandler {
 
                 String[] arguments = GetArguments(message, command.numArguments);
                 if (arguments.length - 1 < command.numArguments) {
-                    client.sendMessage("You provided " + (arguments.length - 1) + " arguments. " +
+                    String errorInformation = "You provided " + (arguments.length - 1) + " arguments. " +
                             "The specified command requires " + command.numArguments + " arguments. "
-                    + "Please try again.");
+                            + "Please try again.";
+                    client.sendMessage(new ServerMessage(errorInformation));
                     break;
                 }
 
@@ -54,7 +56,7 @@ public class CommandHandler {
             }
         } catch (Exception e) {
             e.printStackTrace();
-            client.sendMessage("There was an error with your command, please try again.");
+            client.sendMessage(new ServerMessage("There was an error with your command, please try again."));
         }
         return isCommandProcessed;
     }

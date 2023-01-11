@@ -1,13 +1,14 @@
-package Commands;
+package commands;
 
 import mainPack.ConnectionHandler;
 import mainPack.NamingHandler;
 import mainPack.Server;
+import messages.ServerMessage;
 
 public class NicknameCommand extends Command {
     public NicknameCommand() {
         command = "nick";
-        description = "Changes your screen name. \nArguments: (New Name)";
+        description = "Changes your screen name. Arguments: (New Name)";
         numArguments = 1;
     }
 
@@ -23,10 +24,10 @@ public class NicknameCommand extends Command {
             String nameChangeInfo = "'" + client.getScreenName() + "' just changed their name to '" + newName + "'!";
 
             server.log(nameChangeInfo);
-            server.broadcast(nameChangeInfo);
+            server.broadcast(new ServerMessage(nameChangeInfo));
 
             client.setScreenName(newName);
-            client.sendMessage("Your name was successfully changed to '" + newName + "'");
+            client.sendMessage(new ServerMessage("Your name was successfully changed to '" + newName + "'"));
         }
     }
 }
