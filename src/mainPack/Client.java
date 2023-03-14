@@ -14,28 +14,20 @@ public class Client implements Runnable {
     private Gui gui;
     private BufferedReader in;
     private PrintWriter out;
-    private boolean isClosed;
-
-    public Client() {
-        isClosed = false;
-    }
-
+    public Client() {}
     @Override
     public void run() {
         try {
-            client = new Socket("127.0.0.1", 9999);
-            out = new PrintWriter(client.getOutputStream(), true);
-            in = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            client = new Socket("127.0.0.1", 9999); //Selects the socket at port 9999 for use in server communications.
+            out = new PrintWriter(client.getOutputStream(), true); //Creates a new PrintWriter to be used to send data through the socket.
+            in = new BufferedReader(new InputStreamReader(client.getInputStream())); //Creates a new BufferedReader to be used to receive data through the socket.
             gui = new Gui(this);
 
-            InputHandler inHandler = new InputHandler();
-            Thread t = new Thread(inHandler);
-            t.start();
-
             String inMessage;
-            while ((inMessage = in.readLine()) != null) {
-                DeserializedMessage deserializedMessage = MessageDeserializer.deserializeMessage(inMessage);
-                gui.addMessage(deserializedMessage.senderName, deserializedMessage.message);
+            while ((inMessage = in.readLine()) != null) { //Keep the client waiting for new data from the socket as long as there is data to be retrieved.
+                DeserializedMessage deserializedMessage = MessageDeserializer.deserializeMessage(inMessage); //Deserializes the Message from the encoded string in order
+                // to properly be able to display the information about the message in the Gui.
+                gui.addMessage(deserializedMessage);
             }
         } catch (IOException e) {
             shutdown();
@@ -43,7 +35,6 @@ public class Client implements Runnable {
     }
 
     public void shutdown() {
-        isClosed = true;
         try {
             out.close();
             in.close();
@@ -60,24 +51,6 @@ public class Client implements Runnable {
         out.println(message);
     }
 
-    class InputHandler implements  Runnable {
-        @Override
-        public void run() {
-            try {
-                BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
-                while (!isClosed) {
-                    String message = inputReader.readLine();
-
-                    if (message.equals("/quit")) {
-                        inputReader.close();
-                        shutdown();
-                    }
-                }
-            } catch (IOException e) {
-                //Handle;
-            }
-        }
-    }
     public static void main(String[] args) {
         Client client = new Client();
         client.run();

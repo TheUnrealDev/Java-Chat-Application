@@ -1,9 +1,15 @@
+/*
+Author: Filip Hellgren
+
+The Gui class responsible for opening a new window and displaying the chat interface that can be used to send messages.
+ */
+
 package userInterface;
 
 import mainPack.Client;
+import messages.DeserializedMessage;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -32,9 +38,10 @@ public class Gui {
     }
 
     private void createUi() {
+        //Initialize a new window and create the UI components inside it
+
         window = new JFrame("Bästa chatten");
         window.setSize(1500, 800);
-        window.setBackground(Color.yellow);
 
         content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
@@ -46,12 +53,13 @@ public class Gui {
         content.add(inputField);
 
         window.add(content);
-        window.setLocationRelativeTo(null);
+        window.setLocationRelativeTo(null); // Centers the window on the screen.
         window.setVisible(true);
     }
 
-    public void addMessage(String sender, String message) {
-        messageDisplay.addMessage(sender, message);
+    public void addMessage(DeserializedMessage deserializedMessage) {
+        // Create a new message label inside the chat display.
+        messageDisplay.addMessage(deserializedMessage);
     }
 
     protected void sendMessage(String message) {

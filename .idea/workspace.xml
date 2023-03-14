@@ -5,28 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff0dbcc4-4db5-43ba-bcea-68dd8288bfac" name="Changes" comment="Main UI with messaging functionality">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/ClientMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/DeserializedMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/MessageDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/messages/ServerMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/userinterface/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/userinterface/UiInputArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/userinterface/UiMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/userinterface/UiMessageList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainPack/ServerLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java Chat Program.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java Chat Program.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/CommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/HelpCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/NicknameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/NicknameCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Commands/QuitCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/QuitCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/CommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/CommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/NicknameCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/commands/NicknameCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/commands/QuitCommand.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainPack/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainPack/ConnectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/ConnectionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainPack/NamingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/NamingHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainPack/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainPack/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/ClientMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/ClientMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/DeserializedMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/DeserializedMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/MessageDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/MessageDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/messages/ServerMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/messages/ServerMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userinterface/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userinterface/UiInputArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/UiInputArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userinterface/UiMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/UiMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userinterface/UiMessageList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/userinterface/UiMessageList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +143,18 @@
       <workItem from="1671049801841" duration="11212000" />
       <workItem from="1673281102550" duration="7187000" />
       <workItem from="1673354199027" duration="8146000" />
-      <workItem from="1673438383583" duration="70000" />
+      <workItem from="1673438383583" duration="5356000" />
+      <workItem from="1673959668944" duration="2209000" />
+      <workItem from="1674040409035" duration="4007000" />
+      <workItem from="1674564371890" duration="2320000" />
+      <workItem from="1674569959841" duration="1547000" />
+      <workItem from="1674645258203" duration="4815000" />
+      <workItem from="1675171177751" duration="5523000" />
+      <workItem from="1676983516853" duration="4546000" />
+      <workItem from="1677064402894" duration="1249000" />
+      <workItem from="1678193299488" duration="4750000" />
+      <workItem from="1678274317273" duration="4400000" />
+      <workItem from="1678797970407" duration="991000" />
     </task>
     <task id="LOCAL-00001" summary="Main Server And Client Functionality, commands">
       <created>1669751228999</created>
@@ -153,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669751228999</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Main UI with messaging functionality">
+      <created>1673438499444</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673438499444</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
