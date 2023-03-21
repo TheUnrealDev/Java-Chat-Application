@@ -14,6 +14,8 @@ public class MessageDeserializer {
     private static DeserializedMessage deserializeServerMessage(String message) {
         //Separates the messages content from the encoded String that is based on a ServerMessage.
         //Creates and returns a new DeserializedMessage containing the message information.
+        //Example input: Server:example message
+
         String[] messageData = message.split(Message.SERIALIZATION_SEPARATOR, 2);
 
         String content = messageData[1];
@@ -22,6 +24,8 @@ public class MessageDeserializer {
 
     private static DeserializedMessage deserializeClientMessage(String message) {
         //Separates the messages content and sender name from the encoded String that is based on a ClientMessage and creates a new DeserializedMessage with this information.
+        //Example input: "Client:12:example name:example message"
+
         String[] messageData = message.split(Message.SERIALIZATION_SEPARATOR, 3); //Gets only the part of the message containing the sender name and message content.
 
         int nameLength = Integer.parseInt(messageData[1]); //Gets the length of the username, this is used in order to skip past the name when searching the string for the separation character that separates the name from the message content.
